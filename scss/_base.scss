@@ -1,0 +1,53 @@
+/*color*/
+$color-light: #f9f9f9;
+$color-black: #000;
+$color-pink:#620B37;
+$color-white: #fff;
+
+$color-background:#e9d8e0;
+$color-hover-pink:rgba(245, 220, 220, 0.555);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    /*min-height: 100vh;
+    background: linear-gradient(rgba($color-black, .4), rgba($color-black, .2)), url('../assets/images/product.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;*/
+    background-color: $color-background;
+    display: grid;
+    justify-content: center;
+}
+/*body login page*/
+#log-in{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: seagreen;
+}
+
+@mixin flexLayout() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin positioning($topValue) {
+    position: absolute;
+    top: $topValue;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin textStyles {
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: center;
+}
