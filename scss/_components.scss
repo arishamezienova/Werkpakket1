@@ -246,8 +246,13 @@ footer{
 //*login page*//
 .wrapper{
     width: 420px;
-    background: purple;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
     color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
 
     h1{
         font-size: 36px;
@@ -314,7 +319,26 @@ footer{
         cursor: pointer;
         font-size: 16px;
         color: #333;
-        font-weight: 500;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .register-link{
+        font-size: 14.5px;
+        text-align: center;
+        margin-top: 20px 0 15px;
+
+        p a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        
     }
 }
 

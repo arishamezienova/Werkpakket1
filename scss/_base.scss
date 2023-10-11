@@ -30,7 +30,9 @@ body{
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background: seagreen;
+        background: url(../assets/images/background-product-texture3-repeat.png) no-repeat;
+        background-size: cover;
+        background-position: center;
 }
 
 @mixin flexLayout() {
