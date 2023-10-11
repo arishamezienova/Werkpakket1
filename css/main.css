@@ -96,6 +96,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  color: #620B37;
 }
 .bestsellers .card {
   background-color: #fff;
