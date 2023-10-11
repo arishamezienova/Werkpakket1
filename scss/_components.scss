@@ -132,6 +132,24 @@
         cursor: pointer;
     }
 }
+//*about page*//
+.big-container h1{
+    margin-top: 8%;
+    text-align: center;
+    font-size: 36px;
+    color: $color-pink;
+    padding-bottom: 10px;
+}
+#title-products{
+    color: $color-pink;
+    text-align: center;
+    font-weight: 400;
+    text-decoration: underline;
+}
+    
+
+
+
 
 footer{
     @include breakpoint(991px){
