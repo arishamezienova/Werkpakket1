@@ -14,10 +14,14 @@
     .colm-left{
       
         .img-product{
-              background-image: url(../assets/images/lipgloss\ -\ hot\ cherry.jpg);
+              background-image: url(../assets/images/gloss/lipgloss\ -\ champ.jpg);
               background-size: cover;
               height: 650px;
               margin-left: 5%;
+
+              &:hover{
+                background-image: url(../assets/images/gloss/close/lipgloss\ -\ champ\ -\ close.jpg);
+              }
 
               
         }
@@ -58,7 +62,7 @@
             font-weight: 500;
             border-radius: 8px;
             padding: 13px 23px;
-            border: 1px solid $color-pink;
+            border: 2px solid $color-pink;
             background: #fff;
             color: $color-pink;
 
@@ -69,6 +73,7 @@
     }
     
 }
+
 .bestsellers{
     display: flex;
     justify-content: center;
@@ -76,60 +81,71 @@
     color: $color-pink;
 
     .card{
+        position: relative;
         background-color: #fff;
-        width: 300px;
-        height: 550px;
+        width: 240px;
+        height: 600px;
         margin: 40px;
         border-radius: 10px;
         color: $color-pink;
-        &:hover{
-            background-color: $color-hover-pink;
-            color: $color-light;
-            cursor: pointer;
-        }
 
-    }
-    .card-image{
+        #LP{
+            font-weight: 500;
+            text-decoration: underline;
+        }
+        
+        &-image{
+            object-fit: contain;
+        }
+            
+        
+        .card-image{
         height: 300px;
         margin-bottom: 10px;
         background-size: cover;
         border-radius: 10px 10px 0 0;
-    }
-    .car-1{
-        background-image: url(../assets/images/lipgloss\ -\ hot\ chocolit\ heat.jpg);
-        &:hover{
-            background-image: url(../assets/images/lipgloss\ -\ close\ -\ hot\ chocolit\ heat.jpg);
         }
-    }
-    
-    .car-2{
-        background-image: url(../assets/images/lipgloss\ -\ glow\ heat.jpg);
-        &:hover{
-            background-image: url(../assets/images/lipgloss\ -\ close\ -\ glow.jpg);
+        .top-img{
+            height: 300px;
+            margin-bottom: 10px;
+            background-size: cover;
+            border-radius: 10px 10px 0 0;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+
+            &:hover{
+                opacity: 1;
+                cursor: pointer;
+            }
         }
-    }
-    .car-3{
-        background-image: url(../assets/images/lipgloss\ -\ clear.jpg);
-        &:hover{
-            background-image: url(../assets/images/lipgloss\ -\ close\ -\ clear.jpg);
+
+        .overlay h2 {
+            padding: 10px;
         }
-    }
-    .card h2{
-        padding: 10px;
-    }
-    .card p{
-        padding: 10px;
-    }
-    .card a{
-        background-color: $color-pink;
-        color: $color-light;
-        padding: 15px 20px;
-        display: block;
-        text-align: center;
-        margin: 20px 50px;
-        border-radius: 8px;
-        text-decoration: none;
-        cursor: pointer;
+        p{
+            padding: 10px;
+        }
+        a{
+            background-color: $color-pink;
+            color: $color-light;
+            padding: 15px 20px;
+            display: block;
+            text-align: center;
+            margin: 20px 50px;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #fff;
+                border: 2px solid $color-pink;
+                color: $color-pink;
+                font-weight: 500;
+            }
+        }
     }
 }
 //*about page*//

@@ -48,8 +48,9 @@ body{
     transform: translate(-50%, -50%);
 }
 
-@mixin textStyles {
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-align: center;
+@mixin image-style($ul, $size, $repeat, $positionX: 50%, $positionY: 50%){
+    background-image: url($ul);
+    background-size: $size;
+    background-repeat: $repeat;
+    background-position: $positionX $positionY;
 }

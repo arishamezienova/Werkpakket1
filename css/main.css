@@ -41,10 +41,13 @@ body {
   flex-wrap: wrap;
 }
 .container .colm-left .img-product {
-  background-image: url(../assets/images/lipgloss\ -\ hot\ cherry.jpg);
+  background-image: url(../assets/images/gloss/lipgloss\ -\ champ.jpg);
   background-size: cover;
   height: 650px;
   margin-left: 5%;
+}
+.container .colm-left .img-product:hover {
+  background-image: url(../assets/images/gloss/close/lipgloss\ -\ champ\ -\ close.jpg);
 }
 .container .colm-left .img-product p {
   visibility: hidden;
@@ -84,7 +87,7 @@ body {
   font-weight: 500;
   border-radius: 8px;
   padding: 13px 23px;
-  border: 1px solid #620B37;
+  border: 2px solid #620B37;
   background: #fff;
   color: #620B37;
 }
@@ -99,43 +102,42 @@ body {
   color: #620B37;
 }
 .bestsellers .card {
+  position: relative;
   background-color: #fff;
-  width: 300px;
-  height: 550px;
+  width: 240px;
+  height: 600px;
   margin: 40px;
   border-radius: 10px;
   color: #620B37;
 }
-.bestsellers .card:hover {
-  background-color: rgba(245, 220, 220, 0.555);
-  color: #f9f9f9;
-  cursor: pointer;
+.bestsellers .card #LP {
+  font-weight: 500;
+  text-decoration: underline;
 }
 .bestsellers .card-image {
+  object-fit: contain;
+}
+.bestsellers .card .card-image {
   height: 300px;
   margin-bottom: 10px;
   background-size: cover;
   border-radius: 10px 10px 0 0;
 }
-.bestsellers .car-1 {
-  background-image: url(../assets/images/lipgloss\ -\ hot\ chocolit\ heat.jpg);
+.bestsellers .card .top-img {
+  height: 300px;
+  margin-bottom: 10px;
+  background-size: cover;
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
 }
-.bestsellers .car-1:hover {
-  background-image: url(../assets/images/lipgloss\ -\ close\ -\ hot\ chocolit\ heat.jpg);
+.bestsellers .card .top-img:hover {
+  opacity: 1;
+  cursor: pointer;
 }
-.bestsellers .car-2 {
-  background-image: url(../assets/images/lipgloss\ -\ glow\ heat.jpg);
-}
-.bestsellers .car-2:hover {
-  background-image: url(../assets/images/lipgloss\ -\ close\ -\ glow.jpg);
-}
-.bestsellers .car-3 {
-  background-image: url(../assets/images/lipgloss\ -\ clear.jpg);
-}
-.bestsellers .car-3:hover {
-  background-image: url(../assets/images/lipgloss\ -\ close\ -\ clear.jpg);
-}
-.bestsellers .card h2 {
+.bestsellers .card .overlay h2 {
   padding: 10px;
 }
 .bestsellers .card p {
@@ -151,6 +153,12 @@ body {
   border-radius: 8px;
   text-decoration: none;
   cursor: pointer;
+}
+.bestsellers .card a:hover {
+  background-color: #fff;
+  border: 2px solid #620B37;
+  color: #620B37;
+  font-weight: 500;
 }
 
 .big-container h1 {
