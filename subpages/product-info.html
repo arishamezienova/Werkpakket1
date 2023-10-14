@@ -5,7 +5,7 @@
     <title>Product info</title>
 
     <!-- Link naar main.css  bestand -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <!-- Link voor icons -->
     <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' >
@@ -15,14 +15,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
+    <header class="header">
+        <a href="index.html" class="logo">Arisha</a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class="bx bx-menu" id="menu-icon"></i>
+            <i class="bx bx-x" id="close-icon"></i>
+           
+        </label>
+        <nav class="navbar"> 
+            <a href="index.html">Home</a>
+            <a href="subpages/product.html">About</a>
+            <a href="subpages/about.html">Shop</a>
+            <a href="subpages/login.html" id="sign-up">Sign up</a>
+            <i class='bx bx-shopping-bag' id="shopping-bag"></i>
+        </nav>
+    </header>
     <div class="main-wrapper">
         <div class="main-container">
             <div class="product-div">
                 <div class="product-div-left">
                     <div class="img-container">
                         <img src="../assets/images/gloss heat/lipgloss - fu$$y.jpg" alt="Fu$$y Heat Liploss">
+                        <img src="../assets/images/gloss heat/close/lipgloss - clear - fu$$y.jpg" alt="Fu$$y Heat Liploss" class="top-img">
                     </div>
                     <div class="hover-conatiner">
                         <div>
@@ -52,10 +75,22 @@
                         <span><i class='bx bxs-star'></i></span>
                         <span><i class='bx bxs-star-half' ></i></span>
                     </div>
-                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum fusce ut placerat orci nulla pellentesque dignissim. Felis eget velit aliquet sagittis id consectetur purus ut. Pretium aenean pharetra magna ac placerat vestibulum lectus. Elementum facilisis leo vel fringilla est ullamcorper. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Euismod quis viverra nibh cras pulvinar mattis nunc sed. Semper viverra nam libero justo laoreet. Risus in hendrerit gravida rutrum quisque non tellus orci. Sem nulla pharetra diam sit amet nisl suscipit. Odio ut sem nulla pharetra diam sit amet nisl suscipit. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Molestie ac feugiat sed lectus vestibulum. Urna id volutpat lacus laoreet. Arcu felis bibendum ut tristique et. Sed viverra tellus in hac habitasse platea dictumst. Porta nibh venenatis cras sed felis eget velit aliquet sagittis.
-                    </p>
+                    <p class="product-description">
+                        FOR THE FULL EFFECT.
+                        PLUMPER-LOOKING LIPS, IRRESISTIBLE SHINE.
+                        
+                        Instant plumping effect
+                        Hint-of-tint color that’s easily applied alone or layered over lipstick
+                        With Plump Job Complex, an innovative blend of ingredients, including ginger root oil and capsicum fruit extract (pepper), to gently titillate and plump lips
+                        Lush, smooth texture with a hint of tint that feels comfortable, and nourishing
+                        With conditioning shea butter and Vitamin E to help lock in moisture
+                        Intense wet-look shine
+                        Light peach scent
+                        
+                        <br><br>
+                        Fenty Beauty is 100% cruelty free.  |  Fill Weight: 0.3 oz / 9 </p>
                     <div class="btn-groups">
-                        <button type ="button" class="add-cart-btn">
+                        <button type ="button" class="add-card-btn">
                             <i class='bx bxs-cart' ></i> Add to cart
                         </button>
                         <button type ="button" class="buy-now-btn">
@@ -65,6 +100,48 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-aboutus">
+                <h2>About us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste veniam quidem porro doloribus repellendus? Ut, iste numquam? Molestiae neque iure eveniet pariatur aut. Architecto vero veritatis quas ipsam velit alias?</p>
+                <ul class="social-media">
+                <li><a href="#"><i class='bx bxl-facebook' ></i></a></li>
+                <li><a href="#"><i class='bx bxl-twitter' ></i></a></li>
+                <li><a href="#"><i class='bx bxl-instagram' ></i></a></li>
+                <li><a href="#"><i class='bx bxl-youtube' ></i></a></li>
+            </ul>
+            </div>
+            <div class="quicklinks">
+                <h2>Support</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="quicklinks">
+                <h2>Shop</h2>
+                <li><a href="#">Lipgloss Heat</a></li>
+                <li><a href="#">Lipgloss</a></li>
+            </div>
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class='bx bxs-phone'></i></span><p><a href="tel:+32497568596">+32 497 56 85 96</a></p>
+                    </li>
+                    <li>
+                        <span><i class='bx bxs-envelope' ></i></span><p><a href="mailto:glossfentybeauty@mailto.com">glossfentybeauty@mailto.com</a></p>
+                    </li>
+                </ul>
+            </div>
+    </footer>
+    <div class="copyrightText">
+        <p>Copyright ©2023 Werkpakket. All Rights Reserved.</p>
     </div>
 </body>
 </html>

@@ -157,19 +157,195 @@
     }
 }
 /*product-info*/
-.img-container{
-    width: 100%;
-    display: block;
-    .hover-conatiner{
-        width: 100%;
-        display: block;
-    }
-}
 
-.main-wrapper{
-    min-height: 100vh;
-    background-color: $color-pink;
+.main-wrapper{ 
+    @include breakpoint(992px){
+        margin: 30% 0 30% 0;
+        
+    }
+    @include breakpoint(600px){
+        margin: 60% 0 60% 0;
+        
+    }
+    @include breakpoint(486px){
+        margin: 130% 0 130% 0;
+        
+    }
+
+    
+    background-color: $color-hover-pink;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    .main-container{
+        
+        max-width: 1200vh;
+        margin: 0 auto;
+        padding: 0 16px;
+
+        .product-div{
+            margin: 1rem 0;
+            padding: 2rem 0;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            background-color: #fff;
+            border-radius: 3px;
+            column-gap: 10px;
+
+                .product-div-left{
+                    padding: 20x;
+                   
+
+                    .img-container{
+                        width: 200px;
+                        margin: 0 auto;
+                        background-size: cover;
+                        position: relative;
+                        img{
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+                    .top-img{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        opacity: 0;
+
+                    &:hover{
+                        opacity: 1;
+                        cursor: pointer;
+                        }
+                    }
+
+                    .hover-conatiner{
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 32px;
+
+                        div{
+                            border: 2px solid rgba(231, 228, 228, 0.7);
+                            padding: 1rem;
+                            border-radius: 3px;
+                            margin: 0 4px 8px 4px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            &:hover{
+                                border-color: rgb(255,145,163);
+                            }
+                        }
+                        img{
+                            width: 60px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .product-div-right{
+                    @include breakpoint(992px){
+                        text-align: center;
+                        
+                    }
+                    padding: 20px;
+
+                    span{
+                        display: block;
+                        
+                    }
+                        .product-name{
+                            font-size: 26px;
+                            margin-bottom: 22px;
+                            font-weight: 700;
+                            letter-spacing: 1px;
+                            opacity: 0.9;
+    
+                        }
+                        .product-price{
+                            font-weight: 700;
+                            font-size: 24px;
+                            opacity: 0.9;
+                            font-weight: 500;
+                        }
+    
+                        .product-rating{
+                            @include breakpoint(992px){
+                                justify-content: center;
+                                
+                            }
+                            display: flex;
+                            align-items: center;
+                            margin-top: 12px;
+
+                            span{
+                                margin-right: 6px;
+                            }
+                        }
+
+                        .product-description{
+                            @include breakpoint(992px){
+                                max-width: 400;
+                                margin-right: auto;
+                                margin-left: auto;
+                                
+                            }
+                            font-weight: 18px;
+                            line-height: 1.6;
+                            font-weight: 300;
+                            opacity: 0.9;
+                            margin-top: 22px;
+                        }
+
+                        .btn-groups{
+                            margin-top: 22px;
+
+                            button{
+                                @include breakpoint(800px){
+                                    width: 100%;
+                                    margin-bottom: 10px;
+                                }
+                                display: inline-block;
+                                font-size: 16px;
+                                text-transform: uppercase;
+                                padding: 15px 16px;
+                                color: #fff;
+                                cursor: pointer;
+                                transition: all 0.3s ease;
+
+                                .bx{
+                                    margin-right: 8px;
+                                    }
+                            }
+                            .add-card-btn{
+                                    background-color: $color-pink;
+                                    border: 2px solid $color-pink;
+                                    margin-right: 8px;
+
+                                &:hover{
+                                        background-color: #fff;
+                                        color: $color-pink;
+                                        }
+                            }
+
+                            .buy-now-btn{
+                                background-color: #000;
+                                border: 2px solid #000;
+
+                                &:hover{
+                                    background-color: #fff;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                }
+                
+            }
+
+    }
 }
 
 
