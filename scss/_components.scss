@@ -64,10 +64,14 @@
             padding: 13px 23px;
             border: 2px solid $color-pink;
             background: #fff;
-            color: $color-pink;
+            text-decoration: none;
 
             &:hover{
                 background-color: $color-hover-pink;
+            }
+            a{
+                text-decoration: none;
+                color: $color-pink;
             }
         }
     }
@@ -149,8 +153,41 @@
     }
 }
 //*about page*//
-.big-container h1{
+.intro{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
     margin-top: 8%;
+    background-color: $color-pink;
+    border: 2px solid $color-pink;
+    
+
+    h1{
+        @include breakpoint(768px){
+            margin-top: 8%;
+        }
+        padding: 20px;
+        color: $color-pink;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 90pt;
+        letter-spacing: 3px;
+        color: $color-pink;
+        text-shadow: -1px 1px 0px pink, 
+                    1px 1px 0 pink,
+                    1px -1px 0 pink,
+                        -1px -1px 0 pink;
+        span{
+            color: pink;
+        }
+    }
+    p{
+        padding: 20px;
+        color: pink;
+    }
+}
+.big-container h1{
+    margin-top: 3%;
     text-align: center;
     font-size: 36px;
     color: $color-pink;
@@ -162,6 +199,7 @@
     font-weight: 400;
     text-decoration: underline;
 }
+
     
 
 

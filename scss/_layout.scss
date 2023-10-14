@@ -154,9 +154,22 @@
         p{
             text-align: center;
         }
-            
-        
     }
+}
+/*product-info*/
+.img-container{
+    width: 100%;
+    display: block;
+    .hover-conatiner{
+        width: 100%;
+        display: block;
+    }
+}
+
+.main-wrapper{
+    min-height: 100vh;
+    background-color: $color-pink;
+    display: flex;
 }
 
 
