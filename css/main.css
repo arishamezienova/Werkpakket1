@@ -562,6 +562,33 @@ footer .footer-container .info li a {
   text-align: center;
 }
 
+/*about page*/
+.banner {
+  background: url(../assets/images/banner.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+}
+
+.container-about {
+  margin: 3%;
+}
+.container-about h1 {
+  color: #620B37;
+  font-weight: 600;
+  padding: 0 0 10px 0;
+}
+.container-about h2 {
+  color: #620B37;
+  font-weight: 500;
+  padding: 10px 0 10px 0;
+}
+.container-about p {
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
 /*product-info*/
 .main-wrapper {
   background-color: rgba(245, 220, 220, 0.555);

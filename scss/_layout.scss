@@ -156,8 +156,36 @@
         }
     }
 }
-/*product-info*/
+/*about page*/
 
+.banner{
+    background: url(../assets/images/banner.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+}
+.container-about{
+    margin: 3%;
+    h1{
+        color: $color-pink;
+        font-weight: 600;
+        padding: 0 0 10px 0;
+    }
+    h2{
+        color: $color-pink;
+        font-weight: 500;
+        padding: 10px 0 10px 0;
+    }
+    p{
+        letter-spacing: 1px;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    
+}
+
+
+/*product-info*/
 .main-wrapper{ 
     @include breakpoint(992px){
         margin: 30% 0 30% 0;
