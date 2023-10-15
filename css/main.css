@@ -7,28 +7,19 @@
 }
 
 body {
-  /*min-height: 100vh;
-  background: linear-gradient(rgba($color-black, .4), rgba($color-black, .2)), url('../assets/images/product.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: scroll;*/
   background-color: #e9d8e0;
   display: grid;
   justify-content: center;
 }
 
-/*body login page*/
-#log-in {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: url(../assets/images/background-product-texture3-repeat.png) no-repeat;
-  background-size: cover;
-  background-position: center;
+/* mixin card-images
+@mixin image-style($ul, $size, $repeat, $positionX: 50%, $positionY: 50%){
+    background-image: url($ul);
+    background-size: $size;
+    background-repeat: $repeat;
+    background-position: $positionX $positionY;
 }
-
+*/
 /*breakpoints*/
 /*breakpoints random value*/
 .container {
@@ -77,7 +68,7 @@ body {
   padding-bottom: 40px;
   font-weight: 500;
 }
-.container .colm-right .shop-now {
+.container .colm-right .content .shop-now {
   margin-top: 30px;
   display: inline-block;
   outline: none;
@@ -88,15 +79,53 @@ body {
   border-radius: 8px;
   padding: 13px 23px;
   border: 2px solid #620B37;
-  background: #fff;
+  background: #f9f9f9;
   text-decoration: none;
 }
-.container .colm-right .shop-now:hover {
+.container .colm-right .content .shop-now:hover {
   background-color: rgba(245, 220, 220, 0.555);
 }
-.container .colm-right .shop-now a {
+.container .colm-right .content .shop-now a {
   text-decoration: none;
   color: #620B37;
+}
+
+/*filter buttons*/
+.filter-btns {
+  text-align: center;
+  margin-top: 20px;
+}
+.filter-btns .filter-btn {
+  background: none;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 10px 30px;
+  font-size: 16px;
+  color: rgba(73, 72, 72, 0.9);
+  font-weight: 400;
+  letter-spacing: 2px;
+  position: relative;
+  transition: all 0.2 ease-in-out;
+}
+.filter-btns .filter-btn:hover {
+  color: #620B37;
+}
+.filter-btns .filter-btn:hover::after {
+  width: 100%;
+}
+.filter-btns .filter-btn::after {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 0;
+  background-color: #620B37;
+  transition: all 0.2 ease-in-out;
 }
 
 .bestsellers {
@@ -107,7 +136,7 @@ body {
 }
 .bestsellers .card {
   position: relative;
-  background-color: #fff;
+  background-color: #f9f9f9;
   width: 240px;
   height: 600px;
   margin: 40px;
@@ -144,10 +173,10 @@ body {
 .bestsellers .card .overlay h2 {
   padding: 10px;
 }
-.bestsellers .card p {
+.bestsellers .card .overlay p {
   padding: 10px;
 }
-.bestsellers .card a {
+.bestsellers .card .overlay a {
   background-color: #620B37;
   color: #f9f9f9;
   padding: 15px 20px;
@@ -158,11 +187,51 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-.bestsellers .card a:hover {
-  background-color: #fff;
+.bestsellers .card .overlay a:hover {
+  background-color: #f9f9f9;
   border: 2px solid #620B37;
   color: #620B37;
   font-weight: 500;
+}
+
+.paginatie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh;
+}
+.paginatie .page {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(59, 59, 59, 0.712);
+}
+.paginatie .page li {
+  margin: 0.25rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  color: #ededed;
+}
+.paginatie .page a {
+  text-decoration: none;
+}
+.paginatie .page a li {
+  background-color: rgba(176, 173, 173, 0.9);
+  border: 1px solid rgba(176, 173, 173, 0.9);
+}
+.paginatie .page a li:hover {
+  border-color: #620B37;
+  color: #620B37;
+}
+.paginatie .page a li:active {
+  background-color: rgba(245, 220, 220, 0.555);
+  color: #f9f9f9;
+  border-color: rgba(245, 220, 220, 0.555);
+  font-weight: 600;
+  box-shadow: 0 0.5rem 1rem rgba(226, 137, 218, 0.2117647059);
 }
 
 .intro {
@@ -275,7 +344,7 @@ footer .footer-container .social-media li a {
   text-decoration: none;
 }
 footer .footer-container .social-media li a i {
-  color: #fff;
+  color: #f9f9f9;
   font-size: 20px;
 }
 footer .footer-container .quicklinks {
@@ -309,7 +378,7 @@ footer .footer-container .info li a {
 
 .copyrightText {
   width: 100%;
-  background: #fff;
+  background: #f9f9f9;
   padding: 20px 100px 30px;
   text-align: center;
   color: #555;
@@ -321,13 +390,24 @@ footer .footer-container .info li a {
   }
 }
 
+/*body login page*/
+#log-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url(../assets/images/background-product-texture3-repeat.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .wrapper {
   width: 420px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  color: #fff;
+  color: rgba(255, 255, 255, 0.74);
   border-radius: 10px;
   padding: 30px 40px;
 }
@@ -350,11 +430,11 @@ footer .footer-container .info li a {
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 40px;
   font-size: 16px;
-  color: #fff;
+  color: #f9f9f9;
   padding: 20px 45px 20px 20px;
 }
 .wrapper .input-box input::placeholder {
-  color: #fff;
+  color: #f9f9f9;
 }
 .wrapper .input-box i {
   position: absolute;
@@ -370,7 +450,7 @@ footer .footer-container .info li a {
   margin: -15px 0 15px;
 }
 .wrapper .remember-forgot a {
-  color: #fff;
+  color: #f9f9f9;
   text-decoration: none;
 }
 .wrapper .remember-forgot a:hover {
@@ -379,7 +459,7 @@ footer .footer-container .info li a {
 .wrapper .btn-login {
   width: 100%;
   height: 45px;
-  background: #fff;
+  background: #f9f9f9;
   border: none;
   outline: none;
   border-radius: 40px;
@@ -396,7 +476,7 @@ footer .footer-container .info li a {
   margin-top: 20px 0 15px;
 }
 .wrapper .register-link p a {
-  color: #fff;
+  color: #f9f9f9;
   text-decoration: none;
   font-weight: 600;
 }
@@ -523,9 +603,10 @@ footer .footer-container .info li a {
 }
 
 .about {
-  height: 70vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: 70vh;
 }
 .about-left {
   width: 40%;
@@ -591,10 +672,10 @@ footer .footer-container .info li a {
 
 /*product-info*/
 .main-wrapper {
-  background-color: rgba(245, 220, 220, 0.555);
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(245, 220, 220, 0.555);
   min-height: 100vh;
 }
 @media (max-width: 992px) {
@@ -622,7 +703,7 @@ footer .footer-container .info li a {
   padding: 2rem 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: #fff;
+  background-color: #f9f9f9;
   border-radius: 3px;
   column-gap: 10px;
 }
@@ -657,7 +738,7 @@ footer .footer-container .info li a {
   margin-top: 32px;
 }
 .main-wrapper .main-container .product-div .product-div-left .hover-conatiner div {
-  border: 2px solid rgba(231, 228, 228, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.74);
   padding: 1rem;
   border-radius: 3px;
   margin: 0 4px 8px 4px;
@@ -666,7 +747,7 @@ footer .footer-container .info li a {
   justify-content: center;
 }
 .main-wrapper .main-container .product-div .product-div-left .hover-conatiner div:hover {
-  border-color: rgb(255, 145, 163);
+  border-color: pink;
 }
 .main-wrapper .main-container .product-div .product-div-left .hover-conatiner img {
   width: 60px;
@@ -731,7 +812,7 @@ footer .footer-container .info li a {
   font-size: 16px;
   text-transform: uppercase;
   padding: 15px 16px;
-  color: #fff;
+  color: #f9f9f9;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -750,7 +831,7 @@ footer .footer-container .info li a {
   margin-right: 8px;
 }
 .main-wrapper .main-container .product-div .product-div-right .btn-groups .add-card-btn:hover {
-  background-color: #fff;
+  background-color: #f9f9f9;
   color: #620B37;
 }
 .main-wrapper .main-container .product-div .product-div-right .btn-groups .buy-now-btn {
@@ -758,8 +839,8 @@ footer .footer-container .info li a {
   border: 2px solid #000;
 }
 .main-wrapper .main-container .product-div .product-div-right .btn-groups .buy-now-btn:hover {
-  background-color: #fff;
-  color: #fff;
+  background-color: #f9f9f9;
+  color: #f9f9f9;
 }
 
 /*# sourceMappingURL=main.css.map */
